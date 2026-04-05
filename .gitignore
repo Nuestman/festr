@@ -1,0 +1,15 @@
+# OS
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs & env (uncomment if you use them)
+# .env
+# .env.local
+# *.log
