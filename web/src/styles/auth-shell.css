@@ -1,0 +1,135 @@
+/* Full-viewport auth & account — aligned with root Vite app (src/styles/auth-shell.css) */
+.auth-shell {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.25rem, 4vw, 2.75rem);
+  isolation: isolate;
+  background: linear-gradient(
+    155deg,
+    oklch(0.96 0.045 245) 0%,
+    oklch(0.98 0.02 240) 42%,
+    oklch(0.95 0.04 55) 100%
+  );
+}
+
+.auth-shell__aurora {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse 90% 70% at 0% 0%,
+      oklch(0.82 0.1 245 / 0.45),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 80% 60% at 100% 100%,
+      oklch(0.86 0.14 55 / 0.35),
+      transparent 58%
+    ),
+    radial-gradient(
+      circle at 50% 120%,
+      oklch(0.75 0.08 250 / 0.2),
+      transparent 45%
+    );
+}
+
+.auth-shell__inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 420px);
+}
+
+.auth-shell__inner--wide {
+  width: min(100%, 42rem);
+}
+
+.auth-shell__header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-shell__headlink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.15s ease;
+}
+
+.auth-shell__headlink:hover {
+  opacity: 0.88;
+}
+
+.auth-shell__logo {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.65rem;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(
+    135deg,
+    oklch(0.62 0.19 48) 0%,
+    oklch(0.72 0.14 55) 100%
+  );
+  box-shadow:
+    0 0 0 1px oklch(0.95 0.02 240 / 0.9),
+    0 12px 28px -8px oklch(0.45 0.12 260 / 0.35);
+}
+
+.auth-shell h1.auth-shell__title {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+  color: var(--foreground);
+}
+
+.auth-shell__subtitle {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--muted-foreground);
+}
+
+.auth-shell__panel {
+  border-radius: var(--radius-lg, 0.75rem);
+  padding: 0.25rem;
+  background: linear-gradient(
+    145deg,
+    oklch(1 0 0 / 0.65) 0%,
+    oklch(0.97 0.03 240 / 0.5) 100%
+  );
+  box-shadow:
+    0 0 0 1px oklch(0.9 0.03 240 / 0.95),
+    0 28px 56px -20px oklch(0.35 0.08 260 / 0.35),
+    0 12px 24px -12px oklch(0.45 0.06 250 / 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.dark .auth-shell {
+  background: linear-gradient(
+    155deg,
+    oklch(0.22 0.04 260) 0%,
+    oklch(0.18 0.03 250) 45%,
+    oklch(0.24 0.06 55) 100%
+  );
+}
+
+.dark .auth-shell__panel {
+  background: linear-gradient(
+    145deg,
+    oklch(0.22 0.03 250 / 0.85) 0%,
+    oklch(0.2 0.04 260 / 0.75) 100%
+  );
+  box-shadow:
+    0 0 0 1px oklch(1 0 0 / 12%),
+    0 28px 56px -20px oklch(0 0 0 / 0.45),
+    0 12px 24px -12px oklch(0 0 0 / 0.3);
+}

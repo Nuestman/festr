@@ -1,0 +1,59 @@
+/**
+ * Neon Auth / Better Auth UI theme tokens.
+ * The bundled `@neondatabase/neon-js/ui/css` maps `--neon-*` → `var(--primary)`, `var(--background)`, etc.
+ */
+:root {
+  --neon-radius: 0.75rem;
+
+  /* Light blue wash + deep readable text */
+  --background: oklch(0.97 0.022 245);
+  --foreground: oklch(0.24 0.04 260);
+
+  --card: oklch(0.995 0.012 235);
+  --card-foreground: oklch(0.22 0.04 260);
+
+  --popover: oklch(0.995 0.012 235);
+  --popover-foreground: oklch(0.22 0.04 260);
+
+  /* Orange — primary actions, focus rings, links */
+  --primary: oklch(0.58 0.19 48);
+  --primary-foreground: oklch(0.99 0.01 95);
+
+  /* Soft blue-gray surfaces */
+  --secondary: oklch(0.93 0.035 238);
+  --secondary-foreground: oklch(0.28 0.04 260);
+
+  --muted: oklch(0.94 0.028 242);
+  --muted-foreground: oklch(0.46 0.03 255);
+
+  --accent: oklch(0.9 0.055 235);
+  --accent-foreground: oklch(0.3 0.06 45);
+
+  --destructive: oklch(0.52 0.21 25);
+  --destructive-foreground: oklch(0.99 0 0);
+
+  --border: oklch(0.87 0.035 240);
+  --input: oklch(0.87 0.035 240);
+  --ring: oklch(0.58 0.16 50);
+}
+
+/* Optional: if the UI toggles `.dark`, keep the same brand family */
+:root.dark {
+  --background: oklch(0.18 0.035 260);
+  --foreground: oklch(0.97 0.015 245);
+  --card: oklch(0.22 0.04 260);
+  --card-foreground: oklch(0.97 0.015 245);
+  --popover: oklch(0.22 0.04 260);
+  --popover-foreground: oklch(0.97 0.015 245);
+  --primary: oklch(0.72 0.16 55);
+  --primary-foreground: oklch(0.18 0.04 260);
+  --secondary: oklch(0.28 0.04 260);
+  --secondary-foreground: oklch(0.95 0.02 245);
+  --muted: oklch(0.28 0.03 260);
+  --muted-foreground: oklch(0.72 0.03 245);
+  --accent: oklch(0.3 0.06 250);
+  --accent-foreground: oklch(0.95 0.02 245);
+  --border: oklch(0.35 0.04 260);
+  --input: oklch(0.32 0.04 260);
+  --ring: oklch(0.72 0.14 55);
+}
